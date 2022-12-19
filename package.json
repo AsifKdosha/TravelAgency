@@ -1,0 +1,24 @@
+{
+  "name": "travelagency",
+  "version": "1.0.0",
+  "description": "A website for managing the Travel Flights booking at the Travel Agency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon controllers/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsifKdosha/TravelAgency.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsifKdosha/TravelAgency/issues"
+  },
+  "homepage": "https://github.com/AsifKdosha/TravelAgency#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
