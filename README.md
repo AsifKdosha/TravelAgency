@@ -1,2 +1,2 @@
 # TravelAgency
-A website for managng the Travel Flights booking at the Travel Agency.
+A website for managing the Travel Flights booking at the Travel Agency.
