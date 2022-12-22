@@ -8,4 +8,4 @@ const flightSchema = new Schema({
     destination:{type: String, required: true},
     departure:{type: String, required: true},
     emptySeats: {type: int, required: true}
-}{timestamps: true})
+},{timestamps: true});
