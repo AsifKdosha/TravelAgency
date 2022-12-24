@@ -10,7 +10,8 @@
   <link rel="icon" href="https://i.ibb.co/92BBm7Y/badasspug.png">
 </head>
 
-<body style="background-image: url(https://i.ibb.co/SRPJ7Vg/theoffice.jpg); background-size: cover; background-attachment: fixed;">
+<body
+  style="background-image: url(https://i.ibb.co/SRPJ7Vg/theoffice.jpg); background-size: cover; background-attachment: fixed;">
 
   <!--Script import START-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -83,10 +84,12 @@
             <option value="CH">Switzerland</option>
             <option value="US">United States</option>
           </select>
-          <div class="col-lg-3 col-sm-6" style="width: 200px; margin-right: 10px; outline-style: solid; outline-width: 2px; outline-color: rgb(162, 10, 182); border-radius: 10px">
+          <div class="col-lg-3 col-sm-6"
+            style="width: 200px; margin-right: 10px; outline-style: solid; outline-width: 2px; outline-color: rgb(162, 10, 182); border-radius: 10px">
             <input id="startDate" class="form-control" type="date" />
           </div>
-          <div class="col-lg-3 col-sm-6" style="width: 200px; margin-right: 10px; outline-style: solid; outline-width: 2px; outline-color: rgb(16, 157, 192); border-radius: 10px">
+          <div class="col-lg-3 col-sm-6"
+            style="width: 200px; margin-right: 10px; outline-style: solid; outline-width: 2px; outline-color: rgb(16, 157, 192); border-radius: 10px">
             <input id="endDate" class="form-control" type="date" />
           </div>
         </ul>
@@ -99,6 +102,21 @@
   </nav>
   <!--Navbar END-->
 
+  <!--Feed START-->
+  <div id="feed">
+  </div>
+  <script>
+    const displayFeed = document.querySelector('#feed');
+    fetch('http://localhost:3000/flights')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(flight => {
+          const dest = '<h3>' + flight.destination + '</h3>';
+          displayFeed.insertAdjacentHTML("beforeend", dest);
+        });
+      })
+  </script>
+  <!--Feed END-->
 </body>
 
 </html>
