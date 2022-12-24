@@ -3,7 +3,7 @@ const { Flight } = require("./models/flight")
 const router = express.Router()
 
 router.get("/", async (req, res, next) => {
-    res.render("index")
+    res.render("index");
 })
 
 //GET all flights
@@ -32,19 +32,11 @@ router.delete('/remove', async (req, res, next) => {
         else
             res.send("Error! Not all flights were deleted.");
     }
-    /*else if (req.query['users']){
-        await User.deleteMany({});
-        const users = await User.find();
-        if (users.length == 0)
-            res.send("All users have been removed.");
-        else
-            res.send("Error! Not all users were deleted.");
-    }*/
     else
         res.send("Query param not identified.");
 });
 
-router.get("/About", (req, res) => {
+router.get("/about", (req, res) => {
     res.send("Hatha tisot")
 })
 
